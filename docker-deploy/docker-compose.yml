@@ -1,0 +1,5 @@
+services:
+  alpine:
+    image: alpine:latest
+    container_name: alpine_container
+    command: sh -c "echo Hello from Alpine container && sleep 300"
