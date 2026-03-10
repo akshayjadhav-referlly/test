@@ -1,7 +1,6 @@
 services:
   frontend:
     build:
-      context: ./frontend
       dockerfile: Dockerfile
     image: resumelly-frontend:latest
     container_name: alpine-frontend
@@ -9,7 +8,6 @@ services:
 
   backend:
     build:
-      context: ./backend
       dockerfile: Dockerfile
     image: resumelly-backend:latest
     container_name: alpine-backend
@@ -17,7 +15,6 @@ services:
 
   middleend:
     build:
-      context: ./middleend
       dockerfile: Dockerfile
     image: resumelly-middleware:latest
     container_name: alpine-middleend
