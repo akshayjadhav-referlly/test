@@ -1,17 +1,24 @@
-version: "3.9"
-
 services:
-  alpine1:
-    image: alpine:latest
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: resumelly-frontend:latest
     container_name: alpine-frontend
-    command: sh -c "echo Hello from Alpine container 1 && sleep 300"
+    command: sh -c "echo Hello from Alpine Frontend container && sleep 300"
 
-  alpine2:
-    image: alpine:latest
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: resumelly-backend:latest
     container_name: alpine-backend
-    command: sh -c "echo Hello from Alpine container 2 && sleep 300"
+    command: sh -c "echo Hello from Alpine Backend container && sleep 300"
 
-  alpine3:
-    image: alpine:latest
+  middleend:
+    build:
+      context: ./middleend
+      dockerfile: Dockerfile
+    image: resumelly-middleware:latest
     container_name: alpine-middleend
-    command: sh -c "echo Hello from Alpine container 3 && sleep 300"
+    command: sh -c "echo Hello from Alpine Middleend container && sleep 300"
