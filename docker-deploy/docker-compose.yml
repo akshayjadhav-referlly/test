@@ -1,5 +1,17 @@
+version: "3.9"
+
 services:
-  alpine:
+  alpine1:
     image: alpine:latest
-    container_name: alpine_container
-    command: sh -c "echo Hello from Alpine container && sleep 300"
+    container_name: alpine-frontend
+    command: sh -c "echo Hello from Alpine container 1 && sleep 300"
+
+  alpine2:
+    image: alpine:latest
+    container_name: alpine-backend
+    command: sh -c "echo Hello from Alpine container 2 && sleep 300"
+
+  alpine3:
+    image: alpine:latest
+    container_name: alpine-middleend
+    command: sh -c "echo Hello from Alpine container 3 && sleep 300"
