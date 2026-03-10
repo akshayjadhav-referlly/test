@@ -2,20 +2,20 @@ services:
   frontend:
     build:
       dockerfile: Dockerfile
-    image: resumelly-frontend:latest
+    image: alpine-frontend
     container_name: alpine-frontend
     command: sh -c "echo Hello from Alpine Frontend container && sleep 300"
 
   backend:
     build:
       dockerfile: Dockerfile
-    image: resumelly-backend:latest
+    image: alpine-backend
     container_name: alpine-backend
     command: sh -c "echo Hello from Alpine Backend container && sleep 300"
 
   middleend:
     build:
       dockerfile: Dockerfile
-    image: resumelly-middleware:latest
+    image: alpine-middleware
     container_name: alpine-middleend
     command: sh -c "echo Hello from Alpine Middleend container && sleep 300"
